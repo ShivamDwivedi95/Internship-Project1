@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Convert File</title>
+    <link href="stylesheet.css" rel="stylesheet" />
+    <style type="text/css">
+      input[type="file"]::file-selector-button {
+        border: 2px solid #327fa8;
+        padding: 0.2em 0.4em;
+        border-radius: 0.2em;
+        background-color: #327fa8;
+        transition: 1s;
+        height: 30px;
+        width: 150px;
+        color: whitesmoke;
+      }
+
+      input[type="file"]::file-selector-button:hover {
+        background-color: #3297a8;
+        border: 2px solid #3297a8;
+      }
+      input[type="button"] {
+        border: 2px solid #327fa8;
+        padding: 0.2em 0.4em;
+        border-radius: 0.2em;
+        background-color: #327fa8;
+        transition: 1s;
+        height: 40px;
+        width: 150px;
+        color: whitesmoke;
+        text-align: center;
+        align-self: center;
+        text-align-last: center;
+        font-size: 18px;
+      }
+      .btn {
+        border: 2px solid #327fa8;
+        padding: 0.2em 0.4em;
+        border-radius: 0.2em;
+        background-color: #327fa8;
+        transition: 1s;
+        height: 40px;
+        width: 150px;
+        color: whitesmoke;
+        text-align: center;
+        align-self: center;
+        text-align-last: center;
+        font-size: 18px;
+      }
+    </style>
+	
+  </head>
+  <body>
+    <div class="nav">
+      <img
+        src="uow1.jpg"
+        style="width: 50px; height: 40px; margin-right: 10px"
+      />
+      Convert WAV to MIDI
+    </div>
+    <br /><br /><br />
+
+    <div class="convert">
+      <label for="myfile">Browse Wav file: </label>
+  		<input type="file" id="myfile" name="myfile" accept=".Wav" style="color: #327fa8;"><br><br><br><br>  
+      <label for="myfile">Provide link for the file: </label>
+		<input type="text" placeholder="URL of WAV file" id="url"/>
+		<br /><br /><br /><br /> 
+    <button id = "convert" class="btn" name="Convert file" value="Convert File" onclick="convertFile()">Convert file</button>
+    </div>
+	<script src="./app.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+  </body>
+</html>
